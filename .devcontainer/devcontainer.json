@@ -8,9 +8,10 @@
 		"context": ".."
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": { 
-		  "installCudnn": true
-		}
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true
+		},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {}
 	  },
 
 	// Configure tool-specific properties.
@@ -67,7 +68,8 @@
 		"--security-opt",
 		"seccomp=unconfined",
 		"--privileged",
-		"--init"
+		"--init",
+		//"--gpus", "all"
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
